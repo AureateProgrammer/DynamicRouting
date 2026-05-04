@@ -8,14 +8,24 @@ import LoginPage from "./pages/LoginPage"
 import AdminPage from "./pages/AdminPage"
 import './App.css'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <BrowserRouter>
+      <AuthProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<BlogIndex />} />
+          <Route path="/post/:id" element={<PostPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
       
     </>
   )
 }
 
-export default App
