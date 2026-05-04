@@ -1,7 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { AuthProvider } from "./context/AuthContext"
+import Navbar from "./components/Navbar"
+import BlogIndex from "./pages/BlogIndex"
+import PostPage from "./pages/PostPage"
+import LoginPage from "./pages/LoginPage"
+import AdminPage from "./pages/AdminPage"
 import './App.css'
 
 function App() {
